@@ -10,7 +10,7 @@ import { StockService } from '../../services/stock.service';
 export class CreateStockComponent {
 
   public stock: Stock;
-  public confirmed : boolean = false;
+  public confirmed = false;
   public message = null;
   public exchanges = ['NYSE', 'NASDAQ', 'OTHER'];
 

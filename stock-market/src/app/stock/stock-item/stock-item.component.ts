@@ -11,6 +11,8 @@ export class StockItemComponent implements OnInit {
   public stock: Stock;
   public stockClasses;
 
+  public stocks: Array<Stock>;
+
   constructor() { }
 
   ngOnInit(): void {

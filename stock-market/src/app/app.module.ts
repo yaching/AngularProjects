@@ -8,16 +8,21 @@ import { CreateStockComponent } from './stock/create-stock/create-stock.componen
 import { StockListComponent } from './stock/stock-list/stock-list.component';
 import { StockService } from './services/stock.service';
 
+import { AgGridModule } from 'ag-grid-angular';
+import { AgGridColumnsComponent } from './ag-grid/ag-grid-columns/ag-grid-columns.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     StockItemComponent,
     CreateStockComponent,
-    StockListComponent
+    StockListComponent,
+    AgGridColumnsComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AgGridModule.withComponents([AgGridColumnsComponent])
   ],
   providers: [
     StockService

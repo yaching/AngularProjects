@@ -10,20 +10,27 @@ import { StockService } from './services/stock.service';
 
 import { AgGridModule } from 'ag-grid-angular';
 import { AgGridColumnsComponent } from './ag-grid/ag-grid-columns/ag-grid-columns.component';
+import { AddPostDialogComponent } from './dialog/add-post-dialog/add-post-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomMaterialModule } from './custom-material.module';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AgGridModule.withComponents([AgGridColumnsComponent]),
+    BrowserAnimationsModule,
+    CustomMaterialModule
+  ],
   declarations: [
     AppComponent,
     StockItemComponent,
     CreateStockComponent,
     StockListComponent,
-    AgGridColumnsComponent
+    AgGridColumnsComponent,
+    AddPostDialogComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AgGridModule.withComponents([AgGridColumnsComponent])
-  ],
+  entryComponents: [AddPostDialogComponent],
   providers: [
     StockService
   ],

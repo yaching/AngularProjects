@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog'; 
+import { AddPostDialogComponent } from './dialog/add-post-dialog/add-post-dialog.component'; 
 
 @Component({
   selector: 'app-root',
@@ -8,6 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'stock-market';
 
+  constructor(public dialog: MatDialog) { }
+
   ngOnInit(): void {
+  }
+
+  showAddPostDialog() {
+    this.dialog.open(AddPostDialogComponent);
   }
 }
